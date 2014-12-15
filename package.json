@@ -9,7 +9,7 @@
 		"test": "npm run lint && node --harmony test/index.js && npm run security",
 		"coverage": "covert test/*.js",
 		"coverage-quiet": "covert test/*.js --quiet",
-		"lint": "jscs test/*.js *.js && npm run eccheck",
+		"lint": "jscs test/*.js *.js",
 		"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
 		"security": "nsp package"
 	},
