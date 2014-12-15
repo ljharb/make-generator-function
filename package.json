@@ -1,0 +1,62 @@
+{
+	"name": "make-generator-function",
+	"version": "1.0.0",
+	"author": "Jordan Harband",
+	"description": "Returns an arbitrary generator function, or undefined if generator syntax is unsupported.",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm run lint && node --harmony test/index.js && npm run security",
+		"coverage": "covert test/*.js",
+		"coverage-quiet": "covert test/*.js --quiet",
+		"lint": "jscs test/*.js *.js && npm run eccheck",
+		"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+		"security": "nsp package"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ljharb/make-generator-function.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ljharb/make-generator-function/issues"
+	},
+	"keywords": [
+		"generator function",
+		"ES6",
+		"generator",
+		"function*"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"foreach": "~2.0.5",
+		"is": "~2.2.0",
+		"tape": "~3.0.3",
+		"indexof": "~0.0.1",
+		"covert": "1.0.0",
+		"jscs": "~1.8.1",
+		"editorconfig-tools": "~0.0.1",
+		"nsp": "~0.5.2"
+	},
+	"testling": {
+		"files": "test/index.js",
+		"browsers": [
+			"iexplore/6.0..latest",
+			"firefox/3.0..6.0",
+			"firefox/15.0..latest",
+			"firefox/nightly",
+			"chrome/4.0..10.0",
+			"chrome/20.0..latest",
+			"chrome/canary",
+			"opera/10.0..latest",
+			"opera/next",
+			"safari/4.0..latest",
+			"ipad/6.0..latest",
+			"iphone/6.0..latest",
+			"android-browser/4.2"
+		]
+	},
+	"engines": {
+		"node": ">= 0.4"
+	}
+}
+
