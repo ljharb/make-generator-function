@@ -1,6 +1,6 @@
 {
 	"name": "make-generator-function",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "Jordan Harband",
 	"description": "Returns an arbitrary generator function, or undefined if generator syntax is unsupported.",
 	"license": "MIT",
