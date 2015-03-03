@@ -11,12 +11,17 @@
 [![browser support][testling-svg]][testling-url]
 
 Returns an arbitrary generator function, or undefined if generator syntax is unsupported.
+If both generator syntax and concise method syntax are supported, the generator function returned will have a "concise" property containing a concise generator method.
 
 ## Example
 ```js
 var maybeGeneratorFunction = require('make-generator-function');
 if (maybeGeneratorFunction) {
 	assert(typeof maybeGeneratorFunction === 'function');
+	var maybeConciseGeneratorMethod = maybeGeneratorFunction.concise;
+	if (maybeConciseGeneratorMethod) {
+		assert(typeof maybeConciseGeneratorMethod === 'function');
+	}
 } else {
 	assert(typeof maybeGeneratorFunction === 'undefined');
 }
