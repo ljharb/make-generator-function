@@ -7,11 +7,11 @@ var makeConciseGeneratorMethod = function () {
     return Function('return { *       gen(  ){ } }.gen;')();
 };
 var generatorFunc;
-try { generatorFunc = makeGeneratorFunction(); } catch (e) {}
-if (generatorFunc) {
-	try {
+try {
+	generatorFunc = makeGeneratorFunction();
+	if (generatorFunc) {
 		generatorFunc.concise = makeConciseGeneratorMethod();
-	} catch (e) {}
-}
+	}
+} catch (e) {/**/}
 
 module.exports = generatorFunc;
