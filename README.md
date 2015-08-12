@@ -31,7 +31,7 @@ if (maybeGeneratorFunction) {
 Simply clone the repo, `npm install`, and run `npm test`
 
 [package-url]: https://npmjs.org/package/make-generator-function
-[npm-version-svg]: http://vb.teelaun.ch/ljharb/make-generator-function.svg
+[npm-version-svg]: http://versionbadg.es/ljharb/make-generator-function.svg
 [travis-svg]: https://travis-ci.org/ljharb/make-generator-function.svg
 [travis-url]: https://travis-ci.org/ljharb/make-generator-function
 [deps-svg]: https://david-dm.org/ljharb/make-generator-function.svg
