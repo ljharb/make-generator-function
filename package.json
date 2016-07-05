@@ -6,7 +6,10 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm run lint && node --harmony test/index.js && npm run security",
+		"pretest": "npm run --silent lint",
+		"test": "npm run --silent tests-only",
+		"tests-only": "node --harmony test/index.js",
+		"posttest": "npm run --silent security",
 		"coverage": "covert test/*.js",
 		"coverage-quiet": "covert test/*.js --quiet",
 		"lint": "npm run jscs && npm run eslint",
