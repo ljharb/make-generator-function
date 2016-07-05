@@ -4,7 +4,7 @@ var makeGeneratorFunction = function () {
 	return Function('return function* () { var x = yield; return x || 42; }')();
 };
 var makeConciseGeneratorMethod = function () {
-    return Function('return { *       gen(  ){ } }.gen;')();
+	return Function('return { *       gen(  ){ } }.gen;')();
 };
 var generatorFunc;
 try {
@@ -12,6 +12,8 @@ try {
 	if (generatorFunc) {
 		generatorFunc.concise = makeConciseGeneratorMethod();
 	}
-} catch (e) {/**/}
+} catch (e) {
+	/**/
+}
 
 module.exports = generatorFunc;
