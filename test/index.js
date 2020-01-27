@@ -8,12 +8,12 @@ test('generators supported', { skip: !genFunction }, function (t) {
 	t.equal(String(genFunction), 'function* () { var x = yield; return x || 42; }', 'genFunction has expected body');
 
 	t.test('concise methods supported', { skip: !genFunction.concise }, function (st) {
-		t.equal(typeof genFunction.concise, 'function', 'genFunction.concise is function');
+		st.equal(typeof genFunction.concise, 'function', 'genFunction.concise is function');
 		st.end();
 	});
 
 	t.test('concise methods not supported', { skip: genFunction.concise }, function (st) {
-		t.equal(typeof genFunction.concise, 'undefined', 'genFunction.concise is undefined');
+		st.equal(typeof genFunction.concise, 'undefined', 'genFunction.concise is undefined');
 		st.end();
 	});
 
