@@ -1,19 +1,16 @@
 'use strict';
 
-var makeGeneratorFunction = function () {
-	return Function('return function* () { var x = yield; return x || 42; }')();
-};
-var makeConciseGeneratorMethod = function () {
-	return Function('return { *       gen(  ){ } }.gen;')();
-};
-var generatorFunc;
-try {
-	generatorFunc = makeGeneratorFunction();
-	if (generatorFunc) {
-		generatorFunc.concise = makeConciseGeneratorMethod();
-	}
-} catch (e) {
-	/**/
-}
+module.exports = function getGeneratorFunctions() {
+	var generatorFuncs = [];
+	try {
+		generatorFuncs.push(Function('return function* () { var x = yield; return x || 42; }')());
+	} catch (e) {}
+	try {
+		generatorFuncs.push(Function('return function* gen() { var x = yield; return x || 42; }')());
+	} catch (e) {}
+	try {
+		generatorFuncs.push(Function('return { *       concise(  ){ var x = yield; return x || 42; } }.concise;')());
+	} catch (e) {}
 
-module.exports = generatorFunc;
+	return generatorFuncs;
+};

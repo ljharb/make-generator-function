@@ -1,26 +1,21 @@
 'use strict';
 
 var test = require('tape');
-var genFunction = require('../');
+var forEach = require('for-each');
+var iterate = require('iterate-iterator');
+var generators = require('../')();
 
-test('generators supported', { skip: !genFunction }, function (t) {
-	t.equal(typeof genFunction, 'function', 'genFunction is function');
-	t.equal(String(genFunction), 'function* () { var x = yield; return x || 42; }', 'genFunction has expected body');
-
-	t.test('concise methods supported', { skip: !genFunction.concise }, function (st) {
-		st.equal(typeof genFunction.concise, 'function', 'genFunction.concise is function');
-		st.end();
-	});
-
-	t.test('concise methods not supported', { skip: genFunction.concise }, function (st) {
-		st.equal(typeof genFunction.concise, 'undefined', 'genFunction.concise is undefined');
-		st.end();
+test('generators supported', { skip: generators.length === 0 }, function (t) {
+	forEach(generators, function (genFunction) {
+		t.comment('genFunction: `' + genFunction + '`');
+		t.equal(typeof genFunction, 'function', 'genFunction is function');
+		t.deepEqual(iterate(genFunction()), [undefined], 'generator yields expected values');
 	});
 
 	t.end();
 });
 
-test('generators not supported', { skip: genFunction }, function (t) {
-	t.equal(typeof genFunction, 'undefined', 'genFunction is undefined');
+test('generators not supported', { skip: generators.length > 0 }, function (t) {
+	t.deepEqual(generators, [], 'no generator functions');
 	t.end();
 });
