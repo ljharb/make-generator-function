@@ -1,4 +1,4 @@
-#make-generator-function <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+# make-generator-function <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 [![Build Status][travis-svg]][travis-url]
 [![dependency status][deps-svg]][deps-url]
@@ -8,23 +8,15 @@
 
 [![npm badge][npm-badge-png]][package-url]
 
-[![browser support][testling-svg]][testling-url]
-
-Returns an arbitrary generator function, or undefined if generator syntax is unsupported.
-If both generator syntax and concise method syntax are supported, the generator function returned will have a "concise" property containing a concise generator method.
+Returns an array of arbitrary generator functions, which will be empty if generator syntax is unsupported.
 
 ## Example
 ```js
-var maybeGeneratorFunction = require('make-generator-function');
-if (maybeGeneratorFunction) {
-	assert(typeof maybeGeneratorFunction === 'function');
-	var maybeConciseGeneratorMethod = maybeGeneratorFunction.concise;
-	if (maybeConciseGeneratorMethod) {
-		assert(typeof maybeConciseGeneratorMethod === 'function');
-	}
-} else {
-	assert(typeof maybeGeneratorFunction === 'undefined');
-}
+var generatorFunctions = require('make-async-generator-function');
+assert(typeof generatorFunctions === 'function');
+
+var funcs = generatorFunctions();
+assert(Array.isArray(funcs), true);
 ```
 
 ## Tests
@@ -38,11 +30,8 @@ Simply clone the repo, `npm install`, and run `npm test`
 [deps-url]: https://david-dm.org/ljharb/make-generator-function
 [dev-deps-svg]: https://david-dm.org/ljharb/make-generator-function/dev-status.svg
 [dev-deps-url]: https://david-dm.org/ljharb/make-generator-function#info=devDependencies
-[testling-svg]: https://ci.testling.com/ljharb/make-generator-function.png
-[testling-url]: https://ci.testling.com/ljharb/make-generator-function
 [npm-badge-png]: https://nodei.co/npm/make-generator-function.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/make-generator-function.svg
 [license-url]: LICENSE
 [downloads-image]: http://img.shields.io/npm/dm/make-generator-function.svg
 [downloads-url]: http://npm-stat.com/charts.html?package=make-generator-function
-
