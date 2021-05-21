@@ -13,6 +13,7 @@
 		"pretest": "npm run --silent lint",
 		"test": "npm run tests-only",
 		"tests-only": "nyc tape 'test/**/*.js'",
+		"test:harmony": "node --harmony test",
 		"posttest": "aud --production",
 		"lint": "eslint .",
 		"eccheck": "eclint check *.js **/*.js > /dev/null",
