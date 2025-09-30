@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.1.0](https://github.com/ljharb/make-generator-function/compare/v2.0.0...v2.1.0) - 2025-09-30
+
+### Commits
+
+- [actions] reuse common workflows [`81ab0fb`](https://github.com/ljharb/make-generator-function/commit/81ab0fb2b05e9f390b9f9d13e5e0c7d77a08cd01)
+- [Tests] migrate tests to Github Actions [`c7c2c59`](https://github.com/ljharb/make-generator-function/commit/c7c2c5997e4e4b9c3d5bfddcd1a837b30b52a4d8)
+- [readme] fix examples; remove testling [`9d394f2`](https://github.com/ljharb/make-generator-function/commit/9d394f2173b3fd5ebaa6c3464ff51fb3abf3ccb5)
+- [meta] use `npmignore` to autogenerate an npmignore file [`705936b`](https://github.com/ljharb/make-generator-function/commit/705936bed0829e52e3de65943433daf4489f2f7e)
+- [Tests] run `nyc` on all tests; use `tape` runner [`a49bd47`](https://github.com/ljharb/make-generator-function/commit/a49bd47226a89b4870d3577a70fc2f334d4b7f94)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `tape` [`8171f61`](https://github.com/ljharb/make-generator-function/commit/8171f614c3dc46fd710fb12d42b6c09bf1bd86d6)
+- [readme] add actions and codecov badges [`e24b999`](https://github.com/ljharb/make-generator-function/commit/e24b9995ecfd847ba82f6cb99dcfd14d7913b69a)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `safe-publish-latest`, `tape` [`df5adc8`](https://github.com/ljharb/make-generator-function/commit/df5adc866099ad0d40fc8265b2f4b0afb74f7300)
+- [meta] do not publish workflow files [`76aaa64`](https://github.com/ljharb/make-generator-function/commit/76aaa6484c1432eb662869db4451161eb27bf937)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `tape`, `aud`, `auto-changelog` [`d113c23`](https://github.com/ljharb/make-generator-function/commit/d113c2337ded6416588a85cb922a634e165b2517)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `auto-changelog`, `iterate-iterator`, `safe-publish-latest`, `tape` [`137e87e`](https://github.com/ljharb/make-generator-function/commit/137e87e13e2436f8971eae66152c727e9e9c0544)
+- [actions] update codecov uploader [`aad77cd`](https://github.com/ljharb/make-generator-function/commit/aad77cdab2ed7e1946170d27af9da54f0bd596bc)
+- [actions] add Automatic Rebase and Require Allow Edits workflows [`2795e85`](https://github.com/ljharb/make-generator-function/commit/2795e85b70fd75e67ec7296b8923d3c415817170)
+- [Dev Deps] update `@ljharb/eslint-config`, `auto-changelog`, `for-each`, `npmignore`, `tape` [`b9b3fc0`](https://github.com/ljharb/make-generator-function/commit/b9b3fc0a68799b475fa56e9dd4b0cbcb679213f6)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `tape` [`1d4f786`](https://github.com/ljharb/make-generator-function/commit/1d4f786eb40d45b2fc971488b1ebca25e5d8df1a)
+- [actions] update rebase action [`08fb424`](https://github.com/ljharb/make-generator-function/commit/08fb4249e906e94aa97529219a7562e9f7f67d1a)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `tape` [`86872bb`](https://github.com/ljharb/make-generator-function/commit/86872bbff47c54e479e7121a309afc5160c331c7)
+- [Dev Deps] update `auto-changelog`, `tape`; add `aud` [`c5abe6e`](https://github.com/ljharb/make-generator-function/commit/c5abe6e443e40f690074593c100360e0ce3391fe)
+- [actions] update codecov uploader [`ac65104`](https://github.com/ljharb/make-generator-function/commit/ac6510490827ea75cf2fb03edc44f78762472950)
+- [actions] update workflows [`b9feec2`](https://github.com/ljharb/make-generator-function/commit/b9feec22317f1ef0fe64275757afd9e876966dff)
+- [New] add a generator function declaration [`44c5266`](https://github.com/ljharb/make-generator-function/commit/44c5266aadc07ee44bec16e501f7977c50ec0af0)
+- [Tests] replace `aud` with `npm audit` [`999219a`](https://github.com/ljharb/make-generator-function/commit/999219a7bf2a244842847a277421b094e3f0371c)
+- [meta] use `prepublishOnly` script for npm 7+ [`964b5e4`](https://github.com/ljharb/make-generator-function/commit/964b5e4c20c49dcc2d37f0a7502f652595145219)
+- [meta] better `eclint` command [`531f4b3`](https://github.com/ljharb/make-generator-function/commit/531f4b3e5afaf9176b69e52fbeb9dc8c49c2c1e1)
+- [Dev Deps] add missing peer dep [`352ef85`](https://github.com/ljharb/make-generator-function/commit/352ef852f620e13849b78d3c3fd074b9f31967cf)
+
 ## [v2.0.0](https://github.com/ljharb/make-generator-function/compare/v1.1.1...v2.0.0) - 2020-01-27
 
 ### Commits
