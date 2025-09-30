@@ -11,6 +11,9 @@ module.exports = function getGeneratorFunctions() {
 	try {
 		generatorFuncs.push(Function('return { *       concise(  ){ var x = yield; return x || 42; } }.concise;')());
 	} catch (e) {}
+	try {
+		generatorFuncs.push(Function('function * handle (next) {\n  yield next\n}\nreturn handle;')());
+	} catch (e) {}
 
 	return generatorFuncs;
 };
